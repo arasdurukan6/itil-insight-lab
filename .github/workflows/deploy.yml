@@ -20,12 +20,10 @@ jobs:
       - run: bun install
 
       - run: bun run build
-        env:
-          NITRO_PRESET: github_pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/client
+          path: ./dist
 
       - uses: actions/deploy-pages@v4
