@@ -152,9 +152,9 @@ function ExamRunner() {
     startedAt.current = Date.now();
   }
 
-  function finish(s = session) {
+  function finish(s: ExamSession | null = session) {
     if (!s) return;
-    const finished = { ...s, finishedAt: Date.now() };
+    const finished: ExamSession = { ...s, finishedAt: Date.now() };
     const sum = scoreSession(finished);
     const result = {
       id: finished.id,
