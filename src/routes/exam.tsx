@@ -147,7 +147,7 @@ function ExamRunner() {
   }
 
   function goto(i: number) {
-    if (i < 0 || i >= session.questions.length) return;
+    if (!session || i < 0 || i >= session.questions.length) return;
     setSession((prev) => (prev ? { ...prev, currentIndex: i } : prev));
     startedAt.current = Date.now();
   }
