@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
   component: Dashboard,
 });
 
-const MODE_ICONS: Record<ExamMode, JSX.Element> = {
+const MODE_ICONS: Record<ExamMode, React.ReactNode> = {
   practice: <BookOpen className="h-4 w-4" />,
   real: <Trophy className="h-4 w-4" />,
   ultra: <Flame className="h-4 w-4" />,
